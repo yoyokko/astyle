@@ -3359,6 +3359,13 @@ void ASBeautifier::parseCurrentLine(const string &line)
 				i += name.length() - 1;
 				continue;
 			}
+			else if (curWord == AS_PROPERTY)
+			{
+				--indentCount;
+				string name = '@' + curWord + ' ';
+				i += name.length() - 1;
+				continue;
+			}
 			else if (curWord == AS_END)
 			{
 				popLastInStatementIndent();

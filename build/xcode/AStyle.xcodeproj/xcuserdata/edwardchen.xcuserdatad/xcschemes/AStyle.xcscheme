@@ -59,7 +59,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "--options=&quot;/Users/edwardchen/.astylerc&quot; &quot;./*.m&quot;"
+            argument = "--options=&quot;/Users/edwardchen/.astylerc&quot; &quot;./*.h&quot;"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

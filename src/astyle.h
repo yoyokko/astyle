@@ -223,6 +223,7 @@ class ASResource
 		static const string AS_PUBLIC, AS_PROTECTED, AS_PRIVATE;
 		static const string AS_CLASS, AS_STRUCT, AS_UNION, AS_INTERFACE, AS_NAMESPACE;
 		static const string AS_END;
+		static const string AS_PROPERTY;
 		static const string AS_SELECTOR;
 		static const string AS_EXTERN, AS_ENUM;
 		static const string AS_STATIC, AS_CONST, AS_SEALED, AS_OVERRIDE, AS_VOLATILE, AS_NEW;

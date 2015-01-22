@@ -1115,6 +1115,7 @@ string ASFormatter::nextLine()
 				if (shouldPadHeader
 				        && (!isNonParenHeader
 				            || (currentHeader == &AS_CASE && peekNextChar() == '(')
+				            || (currentHeader == &AS_PROPERTY && peekNextChar() == '(')
 				            || (currentHeader == &AS_CATCH && peekNextChar() == '('))
 				        && charNum < (int) currentLine.length() - 1 && !isWhiteSpace(currentLine[charNum + 1]))
 					appendSpacePad();
@@ -3976,6 +3977,7 @@ void ASFormatter::padParens(void)
 					         || prevWord == "long"
 					         || prevWord == "double"
 					         || prevWord == "float"
+					         || prevWord == "property"
 					         || (prevWord.length() >= 4     // check end of word for _t
 					             && prevWord.compare(prevWord.length() - 2, 2, "_t") == 0)
 					         || prevWord == "Int32"

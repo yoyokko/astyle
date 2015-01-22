@@ -49,6 +49,7 @@ const string ASResource::AS_INTERFACE = string("interface");
 const string ASResource::AS_NAMESPACE = string("namespace");
 const string ASResource::AS_END = string("end");
 const string ASResource::AS_SELECTOR = string("selector");
+const string ASResource::AS_PROPERTY = string("property");
 const string ASResource::AS_EXTERN = string("extern");
 const string ASResource::AS_ENUM = string("enum");
 const string ASResource::AS_PUBLIC = string("public");
@@ -251,6 +252,7 @@ void ASResource::buildHeaders(vector<const string*>* headers, int fileType, bool
 	headers->push_back(&AS_DEFAULT);
 	headers->push_back(&AS_TRY);
 	headers->push_back(&AS_CATCH);
+	headers->push_back(&AS_PROPERTY);		// Objective-C
 	headers->push_back(&AS_QFOREACH);		// QT
 	headers->push_back(&AS_QFOREVER);		// QT
 	headers->push_back(&AS_FOREACH);		// QT & C#
