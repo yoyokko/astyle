@@ -1511,6 +1511,7 @@ void ASConsole::printHelp() const
 	cout << endl;
 	cout << "                     Artistic Style " << g_version << endl;
 	cout << "                     Maintained by: Jim Pattee\n";
+	cout << "                     Modified by: Edward Chen\n";
 	cout << "                     Original Author: Tal Davidson\n";
 	cout << endl;
 	cout << "Usage:\n";

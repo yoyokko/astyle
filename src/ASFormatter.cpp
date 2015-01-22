@@ -1449,18 +1449,21 @@ string ASFormatter::nextLine()
 		}
 		else if ((currentChar == ')')
 				 && peekNextChar() != ')'
+				 && peekNextChar() != '('
 				 && peekNextChar() != '\n'
 				 && peekNextChar() != '\r'
 				 && peekNextChar() != '\''
-				 && peekNextChar() != ' '
+				 && peekNextChar() != ';'
 				 && peekNextChar() != '"')
 		{
+			isInObjCMethodDefinition = true;
+			isInObjCInterface = false;
 			appendCurrentChar();
 			if (shouldPadMethodBrackets)
 			{
-				goForward(charNum + 1);
 				appendSpaceAfter();
 			}
+			continue;
 		}
 
 		// determine if this is a potential calculation
